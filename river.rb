@@ -14,6 +14,9 @@ class River
   def add_fish(fish)
     @stock.push(fish)
   end
-  
+
+  def remove_fish()
+    @stock.shift()
+  end
 #
 end
