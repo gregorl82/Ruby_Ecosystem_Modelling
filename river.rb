@@ -1,6 +1,6 @@
 class River
 
-  attr_reader :name, :stock
+  attr_reader :name
 
   def initialize(name)
     @name = name
