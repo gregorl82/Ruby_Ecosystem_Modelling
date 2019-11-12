@@ -21,7 +21,8 @@ class Bear
   end
 
   def catch_fish(river)
-    river.remove_fish()
+    fish = river.remove_fish()
+    eat_fish(fish)
   end
 
 #
