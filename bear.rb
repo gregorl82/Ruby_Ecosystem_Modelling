@@ -16,5 +16,13 @@ class Bear
     return "ROAR!"
   end
 
+  def eat_fish(fish)
+    @food.push(fish)
+  end
+
+  def catch_fish(river)
+    river.remove_fish()
+  end
+
 #
 end

@@ -7,7 +7,15 @@ require_relative('../river.rb')
 class BearTest < MiniTest::Test
 
   def setup()
+    @fish = Fish.new("Salmon")
+
+    @river = River.new("Clyde")
+    @river.add_fish(@fish)
+    @river.add_fish(@fish)
+    @river.add_fish(@fish)
+
     @bear = Bear.new("Baloo", "Brown Bear")
+
   end
 
   def test_can_get_name()
@@ -26,6 +34,19 @@ class BearTest < MiniTest::Test
     output = @bear.roar()
     assert_equal("ROAR!", output)
   end
+
+  def test_eat_fish()
+    @bear.eat_fish(@fish)
+    assert_equal(1, @bear.food_count())
+  end
+
+  # def test_catch_fish()
+  #   @bear.catch_fish(@river)
+  #   assert_equal(1, @bear.food_count())
+  #   assert_equal(2, @river.fish_count())
+  # end
+  #
+
 
 #
 end
