@@ -12,5 +12,9 @@ class Bear
     return @food.length()
   end
 
+  def roar()
+    return "ROAR!"
+  end
+
 #
 end
